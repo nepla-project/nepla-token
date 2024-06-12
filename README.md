@@ -10,3 +10,22 @@
 - NodeJS, HardHat, OpenZeppelin
 - Solidity Compiler : 0.8.26
 
+## env.
+
+```bash
+npm install
+cp .env.sample. env
+vi .env
+```
+
+## Deploy
+
+```bssh
+npx hardhat run --network {ethereum||sepolia} "scripts/deploy.js"
+```
+
+## Verify
+
+```bash
+npx hardhat verify --constructor-args arguments.js --contract "contracts/NeplaErc20.sol:Nepla" --network {ethereum||sepolia} {CONTRACT_ADDRESS}
+```
